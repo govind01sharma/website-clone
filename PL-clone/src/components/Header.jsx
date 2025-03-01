@@ -57,18 +57,25 @@ function Header() {
               <button className="bg-[#37003C] text-white px-4 py-2 focus:outline-none flex items-center gap-1">
                 {item.title} <span className="text-sm">▼</span>
               </button>
-              {openDropdown === index && (
-                <div className="absolute left-1/2 transform -translate-x-1/2 mt-2 w-64 bg-[#9900CC] text-white shadow-lg transition-all duration-300 ease-out opacity-0 group-hover:opacity-100">
-                  {/* Dropdown Content */}
-                  <div className="grid grid-cols-2 gap-x-4 gap-y-1 p-2">
-                    {item.links.map((link, linkIndex) => (
-                      <a key={linkIndex} href="#" className="block px-2 py-1 text-xs hover:bg-[#7700AA]">
-                        {link}
-                      </a>
-                    ))}
-                  </div>
+              <div
+                className={`absolute left-1/2 transform -translate-x-1/2 mt-2 w-64 bg-[#9900CC] text-white shadow-lg 
+                  transition-all duration-300 ease-out ${
+                    openDropdown === index ? 'max-h-screen opacity-100 scale-100' : 'max-h-0 opacity-0 scale-95'
+                  }`}
+              >
+                {/* Arrow pointing in the middle */}
+                <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-full w-0 h-0 
+                  border-l-8 border-l-transparent border-r-8 border-r-transparent border-b-8 border-[#9900CC]"></div>
+
+                {/* Dropdown Content */}
+                <div className="grid grid-cols-2 gap-x-4 gap-y-1 p-2">
+                  {item.links.map((link, linkIndex) => (
+                    <a key={linkIndex} href="#" className="block px-2 py-1 text-xs hover:bg-[#7700AA]">
+                      {link}
+                    </a>
+                  ))}
                 </div>
-              )}
+              </div>
             </div>
           ))}
         </nav>
@@ -80,22 +87,21 @@ function Header() {
           Sign in
         </button>
         <button className="bg-[#37003C] p-2">
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    fill="none"
-    viewBox="0 0 24 24"
-    strokeWidth={1.5}
-    stroke="white"
-    className="w-6 h-6"
-  >
-    <path
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      d="M21 21l-4.35-4.35m0 0a7.5 7.5 0 10-1.5 1.5M14 10.5a3.5 3.5 0 11-7 0 3.5 3.5 0 017 0z"
-    />
-  </svg>
-</button>
-
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="w-6 h-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="white"
+            strokeWidth={2}
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M21 21l-4.35-4.35m0 0a7.5 7.5 0 10-1.5 1.5M14 10.5a3.5 3.5 0 11-7 0 3.5 3.5 0 017 0z"
+            />
+          </svg>
+        </button>
       </div>
     </header>
   );
