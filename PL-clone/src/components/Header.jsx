@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import logo from "../assets/images/logo.png";
+import { AiOutlineSearch } from "react-icons/ai";
 
 function Header() {
   const [openDropdown, setOpenDropdown] = useState(null);
@@ -87,20 +88,7 @@ function Header() {
           Sign in
         </button>
         <button className="bg-[#37003C] p-2">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="w-6 h-6"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="white"
-            strokeWidth={2}
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M21 21l-4.35-4.35m0 0a7.5 7.5 0 10-1.5 1.5M14 10.5a3.5 3.5 0 11-7 0 3.5 3.5 0 017 0z"
-            />
-          </svg>
+          <AiOutlineSearch className="text-white w-6 h-6" />
         </button>
       </div>
     </header>
