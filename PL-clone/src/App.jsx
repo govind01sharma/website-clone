@@ -1,13 +1,16 @@
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css'
-
+import Header from './components/Header'
 function App() {
 
   return (
-    <>
-      <h1 class="text-6xl font-bold underline">
-        Hello
-      </h1>
-    </>
+    <Router>
+      <div className="flex flex-col min-h-screen">
+        <Header />
+        
+      </div>
+    </Router>
   )
 }
 
