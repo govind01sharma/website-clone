@@ -64,7 +64,7 @@ function Header() {
                     openDropdown === index ? 'max-h-screen opacity-100 scale-100' : 'max-h-0 opacity-0 scale-95'
                   }`}
               >
-                {/* Arrow pointing in the middle */}
+                
                 <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-full w-0 h-0 
                   border-l-8 border-l-transparent border-r-8 border-r-transparent border-b-8 border-[#9900CC]"></div>
 
@@ -82,7 +82,7 @@ function Header() {
         </nav>
       </div>
 
-      {/* Sign in and Search Buttons */}
+      
       <div className="flex items-center space-x-6 ml-auto">
         <button className="bg-white text-black font-semibold px-4 py-2 hover:bg-gray-200">
           Sign in
