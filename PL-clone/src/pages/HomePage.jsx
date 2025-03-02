@@ -2,10 +2,11 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Fixtures from '../components/Fixtures';
 import NewsSection from '../components/NewsSection';
+import ClubNews from '../components/ClubNews';
 
 function HomePage() {
   return (
-    <div className="min-h-screen relative">
+    <div className="min-h-screen relative flex flex-col">
       {/* Fixtures Component (Overlay) */}
       <div className="absolute top-0 left-0 z-20 w-auto px-2">
         <Fixtures />
@@ -20,7 +21,14 @@ function HomePage() {
         </div>
       </div>
 
-      {/* Section with White Background */}
+      {/* Club News Section (Right Aligned, Slightly Reduced Width) */}
+      <div className="bg-white flex justify-end w-full">
+        <div className="w-[70%]"> 
+          <ClubNews />
+        </div>
+      </div>
+
+      {/* Section with White Background (Remaining Content) */}
       <div className="bg-white min-h-[20vh]"></div>
     </div>
   );
