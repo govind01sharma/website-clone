@@ -6,9 +6,10 @@ import HomePage from "./pages/HomePage";
 function App() {
   return (
     <Router>
-      <div className="w-full flex flex-col min-h-screen"> {/* Ensure full width */}
+      <div className="w-full flex flex-col min-h-screen"> 
         <Header />
-        <main className="flex-grow w-full"> {/* Ensure main also has full width */}
+        
+        <main className="flex-grow w-full pt-[210px]">
           <Routes>
             <Route path="/" element={<HomePage />} />
           </Routes>
