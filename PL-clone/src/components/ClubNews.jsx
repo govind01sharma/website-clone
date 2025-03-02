@@ -44,7 +44,6 @@ function ClubNews() {
 
   return (
     <div className="bg-white px-9">
-      {/* Header */}
       <div className="flex justify-between items-center mb-2">
         <h2 className="text-lg font-semibold">Club News</h2>
         <a href="#" className="text-[#37003C] hover:underline text-xl">
@@ -52,7 +51,6 @@ function ClubNews() {
         </a>
       </div>
 
-      {/* News Grid */}
       <div className="grid grid-cols-2 md:grid-cols-4 gap-5">
         {newsItems.map((item, index) => (
           <div
@@ -62,11 +60,11 @@ function ClubNews() {
             <img
               src={item.imageUrl}
               alt={item.headline}
-              className="w-full h-16 object-cover" // Reduced image height
+              className="w-full h-16 object-cover" 
             />
-            <div className="p-2"> {/* Reduced padding */}
-              <div className="text-gray-600 text-xs mb-0.5">Club News</div> {/* Reduced font size and margin */}
-              <a href="#" className="font-bold text-gray-800 hover:text-blue-500 text-sm"> {/* Reduced font size */}
+            <div className="p-2"> 
+              <div className="text-gray-600 text-xs mb-0.5">Club News</div> 
+              <a href="#" className="font-bold text-gray-800 hover:text-blue-500 text-sm"> 
                 {item.headline}
               </a>
             </div>

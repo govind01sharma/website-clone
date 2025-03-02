@@ -27,7 +27,6 @@ function Header() {
 
   return (
     <header className="fixed top-0 left-0 w-full z-50 bg-[#37003C] text-white border-b border-gray-700">
-      {/* Top Header */}
       <div className="flex items-center px-8 py-3">
         <div className="flex items-center space-x-10">
           <img src={logo} alt="logo" className="w-[80px] md:w-[100px] object-cover" />
@@ -83,7 +82,6 @@ function Header() {
         </div>
       </div>
 
-      {/* Navbar Section (Previously Navbar.jsx) */}
       <nav className="bg-white shadow-md">
         <div className="container mx-auto px-4">
           <ul className="flex space-x-6 justify-center py-4 text-gray-800 font-semibold text-sm">

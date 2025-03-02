@@ -44,25 +44,21 @@ function Fixtures() {
 
   return (
     <div className="font-sans w-80 mx-auto my-5 rounded-lg shadow-md overflow-hidden bg-white">
-      {/* Header */}
       <div className="bg-gradient-to-r from-[#672c98] to-[#0391ff] text-white py-3 px-5 text-center font-bold text-lg flex items-center justify-center">
         <img src={PLlogo} alt="Premier League" className="w-6 h-8 mr-2" />
         Matchweek 27
       </div>
 
-      {/* Sub Header */}
       <div className="text-gray-500 py-2 px-4 text-left text-xs">
         All times shown are your local time
       </div>
 
       {fixturesData.map((matchDay, index) => (
         <div key={index}>
-          {/* Match Day Header */}
           <div className="text-[#37003C] py-2 px-4 text-left font-medium">
             {matchDay.date}
           </div>
 
-          {/* Matches */}
           {matchDay.matches.map((match, matchIndex) => (
             <div key={matchIndex} className="flex items-center justify-between py-3 px-4 border-b last:border-b-0 hover:bg-[#9D7CBF] transition-colors duration-200">
               <span className="font-bold w-8 text-center text-gray-700">{match.team1}</span>
