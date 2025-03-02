@@ -9,7 +9,7 @@ function App() {
       <div className="w-full flex flex-col min-h-screen"> 
         <Header />
         
-        <main className="flex-grow w-full pt-[210px]">
+        <main className="flex-grow w-full pt-[200px]">
           <Routes>
             <Route path="/" element={<HomePage />} />
           </Routes>

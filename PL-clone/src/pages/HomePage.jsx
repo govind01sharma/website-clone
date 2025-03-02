@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function HomePage() {
   return (
-    <div>HomePage</div>
+    <div className="bg-[#37003C]">HomePage</div>
   )
 }
 
