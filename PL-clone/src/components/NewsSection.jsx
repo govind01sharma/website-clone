@@ -11,7 +11,7 @@ function NewsSection() {
         <div className="px-4">
           <div className="text-sm text-white font-semibold">Feature</div>
           <h3 className="text-2xl font-bold text-white mb-2 group-hover:underline transition duration-200">Why has Cole Palmer gone cold?</h3>
-          <p className="text-white text-base">Ninad Barbadikar examines why the Chelsea star's attacking output has...</p>
+          <p className="text-white text-base">Ninad Barbadikar examines why the Chelsea star's attacking output has dipped since his impressive first few months of the season.</p>
         </div>
       </a>
 
