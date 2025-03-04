@@ -1,5 +1,4 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Fixtures from '../components/Fixtures';
 import NewsSection from '../components/NewsSection';
 import ClubNews from '../components/ClubNews';
