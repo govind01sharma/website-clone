@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
 import HomePage from "./pages/HomePage";
 import Fixtures from "./components/Fixtures";
+import Table from "./pages/Table";
 import Footer from "./components/Footer";
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
             <Route path="/home" element={<HomePage />} />
             <Route path="/fixtures" element={<Fixtures />} />
             <Route path="/results" element={<Fixtures />} />
+            <Route path="/table" element={<Table />} />
           </Routes>
         </main>
         <Footer /> 

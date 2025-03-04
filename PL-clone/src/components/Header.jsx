@@ -76,6 +76,8 @@ function Header() {
                                   ? "/results"
                                   : link === "Home"
                                   ? "/home"
+                                  : link === "Tables"
+                                  ? "/table"
                                   : "#"
                               )
                             }
