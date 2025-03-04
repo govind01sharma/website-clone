@@ -62,12 +62,12 @@ function SignIn() {
               </div>
             </div>
 
-            <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline w-full mb-2">
+            <button className="bg-blue-500  text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline w-full mb-2">
               <i className="fab fa-facebook-f mr-2"></i>
               Login with Facebook
             </button>
 
-            <button className="bg-black hover:bg-gray-800 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline w-full">
+            <button className="bg-black  text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline w-full">
               <i className="fab fa-twitter mr-2"></i>
               Login with X
             </button>
