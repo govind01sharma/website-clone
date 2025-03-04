@@ -71,7 +71,7 @@ function Footer() {
         <ul>
           <li><a href="#" style={{ color: 'white', textDecoration: 'none', fontSize: '0.9em' }}>Dashboard</a></li>
           <li><a href="#" style={{ color: 'white', textDecoration: 'none', fontSize: '0.9em' }}>Player Stats</a></li>
-          <li><a href="#" style={{ color: '#FFCDD2', textDecoration: 'none', fontSize: '0.9em' }}>Club Stats</a></li>
+          <li><a href="#" style={{ color: 'white', textDecoration: 'none', fontSize: '0.9em' }}>Club Stats</a></li>
           <li><a href="#" style={{ color: 'white', textDecoration: 'none', fontSize: '0.9em' }}>All-time Stats</a></li>
           <li><a href="#" style={{ color: 'white', textDecoration: 'none', fontSize: '0.9em' }}>Milestones</a></li>
           <li><a href="#" style={{ color: 'white', textDecoration: 'none', fontSize: '0.9em' }}>Records</a></li>

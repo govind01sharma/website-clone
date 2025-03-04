@@ -26,7 +26,7 @@ function Header() {
   }, []);
 
   const handleNavigation = (path) => {
-    window.location.href = path; // Navigate using traditional reload
+    window.location.href = path;
   };
 
   return (

@@ -1,7 +1,10 @@
 import React from "react";
 import SalahImage from "../assets/images/players/Salah.png";
-import VVDImage from "../assets/images/players/Van-Dijk.png"; 
+import VVDImage from "../assets/images/players/Van-Dijk.png";
 import SelsImage from "../assets/images/players/Sels.png";
+import LivLogo from "../assets/images/players/Liv.png";
+import CryLogo from "../assets/images/players/Cry.png";
+import SouLogo from "../assets/images/players/Sou.png";
 
 const statsData = [
   {
@@ -70,10 +73,83 @@ const statsData = [
   },
 ];
 
+const clubStatsData = [
+  {
+    title: "Goals",
+    leader: {
+      name: "Liverpool",
+      stadium: "Anfield",
+      value: 66,
+      image: LivLogo,
+    },
+    others: [
+      { rank: 2, name: "Man City", stadium: "Etihad Stadium", value: 53 },
+      { rank: 2, name: "Spurs", stadium: "Tottenham Hotspur Stadium", value: 53 },
+      { rank: 4, name: "Chelsea", stadium: "Stamford Bridge", value: 52 },
+      { rank: 5, name: "Arsenal", stadium: "Emirates Stadium", value: 51 },
+      { rank: 6, name: "Brentford", stadium: "Gtech Community Stadium", value: 48 },
+      { rank: 7, name: "Newcastle", stadium: "St. James' Park", value: 46 },
+    ],
+  },
+  {
+    title: "Tackles",
+    leader: {
+      name: "Crystal Palace",
+      stadium: "Selhurst Park",
+      value: 585,
+      image: CryLogo,
+    },
+    others: [
+      { rank: 2, name: "Man Utd", stadium: "Old Trafford", value: 573 },
+      { rank: 2, name: "Wolves", stadium: "Molineux Stadium", value: 573 },
+      { rank: 4, name: "Everton", stadium: "Goodison Park", value: 540 },
+      { rank: 5, name: "Leicester", stadium: "King Power Stadium", value: 535 },
+      { rank: 6, name: "Bournemouth", stadium: "Vitality Stadium", value: 520 },
+      { rank: 7, name: "Nottm Forest", stadium: "The City Ground", value: 499 },
+    ],
+  },
+  {
+    title: "Wins",
+    leader: {
+      name: "Liverpool",
+      stadium: "Anfield",
+      value: 20,
+      image: LivLogo,
+    },
+    others: [
+      { rank: 2, name: "Arsenal", stadium: "Emirates Stadium", value: 15 },
+      { rank: 3, name: "Man City", stadium: "Etihad Stadium", value: 14 },
+      { rank: 3, name: "Nottm Forest", stadium: "The City Ground", value: 14 },
+      { rank: 5, name: "Chelsea", stadium: "Stamford Bridge", value: 13 },
+      { rank: 5, name: "Newcastle", stadium: "St. James' Park", value: 13 },
+      { rank: 7, name: "Bournemouth", stadium: "Vitality Stadium", value: 12 },
+    ],
+  },
+  {
+    title: "Losses",
+    leader: {
+      name: "Southampton",
+      stadium: "St. Mary's Stadium",
+      value: 22,
+      image: SouLogo,
+    },
+    others: [
+      { rank: 2, name: "Leicester", stadium: "King Power Stadium", value: 18 },
+      { rank: 3, name: "Wolves", stadium: "Molineux Stadium", value: 17 },
+      { rank: 4, name: "Ipswich", stadium: "Portman Road", value: 16 },
+      { rank: 5, name: "Spurs", stadium: "Tottenham Hotspur Stadium", value: 14 },
+      { rank: 6, name: "Man Utd", stadium: "Old Trafford", value: 12 },
+      { rank: 6, name: "West Ham", stadium: "London Stadium", value: 12 },
+    ],
+  },
+];
+
 const Stats = () => {
   return (
     <div className="container mx-auto px-2 py-10">
-      <h1 className="text-[#37003C] text-4xl font-bold mb-5 custom-font-family">2024/25 Player Stats</h1>
+      <h1 className="text-[#37003C] text-4xl font-bold mb-5 custom-font-family">
+        2024/25 Player Stats
+      </h1>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         {statsData.map((stat, index) => (
           <div
@@ -86,10 +162,66 @@ const Stats = () => {
               <div className="flex items-center justify-between">
                 <div>
                   <div className="flex items-center">
-                    <span className="text-4xl font-bold">{stat.leader.value}</span>
+                    <span className="text-4xl font-bold">
+                      {stat.leader.value}
+                    </span>
                   </div>
                   <p className="text-sm">{stat.leader.name}</p>
                   <p className="text-xs">{stat.leader.team}</p>
+                </div>
+                {/* Image */}
+                <div className="absolute top-2 right-0 mr-2">
+                  <img
+                    src={stat.leader.image}
+                    alt={stat.leader.name}
+                    className="w-24 h-30 pt-1 object-cover"
+                  />
+                </div>
+              </div>
+            </div>
+
+            {/* Others Section */}
+            <div className="p-4">
+              <ul>
+                {stat.others.map((other, idx) => (
+                  <li
+                    key={idx}
+                    className="flex items-center justify-between py-2 border-b border-gray-200 last:border-none"
+                  >
+                    <div className="flex items-center">
+                      <span className="mr-2">{other.rank}</span>
+                      <span className="text-gray-800">{other.name}</span>
+                    </div>
+                    <span className="text-gray-600">{other.value}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <h1 className="text-[#37003C] text-4xl font-bold mt-12 mb-5 custom-font-family">
+        2024/25 Premier League Club Stats
+      </h1>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        {clubStatsData.map((stat, index) => (
+          <div
+            key={index}
+            className="bg-white shadow rounded-lg overflow-hidden"
+          >
+            {/* Leader Section */}
+            <div className="bg-red-500 text-white p-4 relative">
+              <h2 className="text-xl font-semibold">{stat.title}</h2>
+              <div className="flex items-center justify-between">
+                <div>
+                  <div className="flex items-center">
+                    <span className="text-4xl font-bold">
+                      {stat.leader.value}
+                    </span>
+                  </div>
+                  <p className="text-sm">{stat.leader.name}</p>
+                  <p className="text-xs">{stat.leader.stadium}</p>
                 </div>
                 {/* Image */}
                 <div className="absolute top-2 right-0 mr-2">
