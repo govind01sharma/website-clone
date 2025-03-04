@@ -4,6 +4,7 @@ import Header from "./components/Header";
 import HomePage from "./pages/HomePage";
 import Fixtures from "./components/Fixtures";
 import Table from "./pages/Table";
+import SignIn from "./pages/Signin";
 import Footer from "./components/Footer";
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
             <Route path="/fixtures" element={<Fixtures />} />
             <Route path="/results" element={<Fixtures />} />
             <Route path="/table" element={<Table />} />
+            <Route path="/signin" element={<SignIn />} />
           </Routes>
         </main>
         <Footer /> 

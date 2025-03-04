@@ -95,7 +95,8 @@ function Header() {
         </div>
 
         <div className="flex items-center space-x-6 ml-auto">
-          <button className="bg-white text-black font-semibold px-4 py-2 hover:bg-gray-200">Sign in</button>
+          <button className="bg-white text-black font-semibold px-4 py-2 hover:bg-gray-200"
+          onClick={() => (window.location.href = "/signin")}>Sign in</button>
           <button className="bg-[#37003C] p-2">
             <AiOutlineSearch className="text-white w-6 h-6" />
           </button>
@@ -131,6 +132,8 @@ function Header() {
                         ? "/results"
                         : item === "Home"
                         ? "/home"
+                        : item === "Tables"
+                        ? "/table"
                         : "#"
                     )
                   }
