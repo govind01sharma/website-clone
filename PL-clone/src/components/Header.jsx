@@ -134,6 +134,8 @@ function Header() {
                         ? "/home"
                         : item === "Tables"
                         ? "/table"
+                        : item === "Stats"
+                        ? "/stats"
                         : "#"
                     )
                   }
