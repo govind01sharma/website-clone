@@ -25,11 +25,15 @@ function Header() {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
+  const handleNavigation = (path) => {
+    window.location.href = path; // Navigate using traditional reload
+  };
+
   return (
     <header className="fixed top-0 left-0 w-full z-50 bg-[#37003C] text-white border-b border-gray-700">
       <div className="flex items-center px-8 py-3">
         <div className="flex items-center space-x-10">
-          <img src={logo} alt="logo" className="w-[80px] md:w-[100px] object-cover" />
+          <img src={logo} alt="logo" className="w-[80px] md:w-[100px] object-cover cursor-pointer" onClick={() => handleNavigation("/")} />
           <nav className="hidden md:flex space-x-8 font-semibold">
             {menuItems.map((item, index) => (
               <div
@@ -56,14 +60,28 @@ function Header() {
                       animate={{ y: 0 }}
                       exit={{ y: -10 }}
                       transition={{ duration: 0.2 }}
-                      className="absolute left-0 mt-2 w-64 bg-[#9900CC] z-50  text-white shadow-lg rounded-md"
+                      className="absolute left-0 mt-2 w-64 bg-[#9900CC] z-50 text-white shadow-lg rounded-md"
                       onMouseEnter={() => setOpenDropdown(index)}
                     >
                       <div className="grid grid-cols-2 gap-x-4 gap-y-1 p-2">
                         {item.links.map((link, linkIndex) => (
-                          <a key={linkIndex} href="#" className="block px-2 py-1 text-xs hover:bg-[#7700AA]">
+                          <button
+                            key={linkIndex}
+                            className="block text-left px-2 py-1 text-xs hover:bg-[#7700AA] w-full"
+                            onClick={() =>
+                              handleNavigation(
+                                link === "Fixtures"
+                                  ? "/fixtures"
+                                  : link === "Results"
+                                  ? "/results"
+                                  : link === "Home"
+                                  ? "/home"
+                                  : "#"
+                              )
+                            }
+                          >
                             {link}
-                          </a>
+                          </button>
                         ))}
                       </div>
                     </motion.div>
@@ -101,7 +119,22 @@ function Header() {
               "More",
             ].map((item, index) => (
               <li key={index} className="relative group cursor-pointer">
-                <span className="group-hover:text-black">{item}</span>
+                <button
+                  className="group-hover:text-black"
+                  onClick={() =>
+                    handleNavigation(
+                      item === "Fixtures"
+                        ? "/fixtures"
+                        : item === "Results"
+                        ? "/results"
+                        : item === "Home"
+                        ? "/home"
+                        : "#"
+                    )
+                  }
+                >
+                  {item}
+                </button>
                 <div className="absolute left-0 w-full h-1 bg-gradient-to-r from-blue-500 to-purple-500 scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
               </li>
             ))}

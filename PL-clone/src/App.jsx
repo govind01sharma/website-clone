@@ -14,7 +14,9 @@ function App() {
         <main className="flex-grow w-full pt-[200px]">
           <Routes>
             <Route path="/" element={<HomePage />} />
+            <Route path="/home" element={<HomePage />} />
             <Route path="/fixtures" element={<Fixtures />} />
+            <Route path="/results" element={<Fixtures />} />
           </Routes>
         </main>
         <Footer /> 
