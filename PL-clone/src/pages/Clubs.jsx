@@ -103,7 +103,7 @@ function Clubs() {
             <div 
                 key={index} 
                 className="rounded-lg shadow-md overflow-hidden" 
-                style={{ backgroundColor: club.color }} // Apply dynamic background color here
+                style={{ backgroundColor: club.color }}
             >
                 <div className="p-4">
                 <img
