@@ -22,26 +22,26 @@ import Wol from '../assets/images/clubs-route/Wol.png';
 
 function Clubs() {
     const clubsData = [
-        { name: 'Arsenal', logo: Ars, color: '#EF0107' },
-        { name: 'Aston Villa', logo: Ast, color: '#95BFE5' },
-        { name: 'Bournemouth', logo: Bou, color: '#D32531' },
-        { name: 'Brentford', logo: Bre, color: '#E30613' },
-        { name: 'Brighton & Hove Albion', logo: Bha, color: '#0057B8' },
-        { name: 'Chelsea', logo: Che, color: '#034694' },
-        { name: 'Crystal Palace', logo: Cry, color: '#1B458F' },
-        { name: 'Everton', logo: Eve, color: '#003399' },
-        { name: 'Fulham', logo: Ful, color: '#000000' },
-        { name: 'Ipswich Town', logo: Ips, color: '#0000A0' },
-        { name: 'Leicester City', logo: Lei, color: '#0053A0' },
-        { name: 'Liverpool', logo: Liv, color: '#C8102E' },
-        { name: 'Manchester City', logo: Mci, color: '#6CABDD' },
-        { name: 'Newcastle United', logo: New, color: '#241F20' },
-        { name: 'Nottingham Forest', logo: Nott, color: '#FF0000' },
-        { name: 'Southampton', logo: Sou, color: '#D71920' },
-        { name: 'Tottenham Hotspur', logo: Tot, color: '#132257' },
-        { name: 'Manchester United', logo: Utd, color: '#DA291C' },
-        { name: 'West Ham United', logo: Whu, color: '#7A263A' },
-        { name: 'Wolverhampton Wanderers', logo: Wol, color: '#FDB913' },
+        { name: 'Arsenal', logo: Ars, color: '#EF0107', link: 'https://www.arsenal.com/?utm_source=premier-league-website&utm_campaign=website&utm_medium=link' },
+        { name: 'Aston Villa', logo: Ast, color: '#95BFE5', link: 'https://www.avfc.co.uk/?utm_source=premier-league-website&utm_campaign=website&utm_medium=link' },
+        { name: 'Bournemouth', logo: Bou, color: '#D32531', link: 'https://www.afcb.co.uk/?utm_source=premier-league-website&utm_campaign=website&utm_medium=link' },
+        { name: 'Brentford', logo: Bre, color: '#E30613', link: 'https://www.brentfordfc.com/?utm_source=premier-league-website&utm_campaign=website&utm_medium=link' },
+        { name: 'Brighton & Hove Albion', logo: Bha, color: '#0057B8', link: 'https://www.brightonandhovealbion.com/?utm_source=premier-league-website&utm_campaign=website&utm_medium=link' },
+        { name: 'Chelsea', logo: Che, color: '#034694', link: 'https://www.chelseafc.com/?utm_source=premier-league-website&utm_campaign=website&utm_medium=link' },
+        { name: 'Crystal Palace', logo: Cry, color: '#1B458F', link: 'https://www.cpfc.co.uk/?utm_source=premier-league-website&utm_campaign=website&utm_medium=link' },
+        { name: 'Everton', logo: Eve, color: '#003399', link: 'https://www.evertonfc.com/?utm_source=premier-league-website&utm_campaign=website&utm_medium=link' },
+        { name: 'Fulham', logo: Ful, color: '#000000', link: 'https://www.fulhamfc.com/?utm_source=premier-league-website&utm_campaign=website&utm_medium=link' },
+        { name: 'Ipswich Town', logo: Ips, color: '#0000A0', link: 'https://www.itfc.co.uk/?utm_source=premier-league-website&utm_campaign=website&utm_medium=link' },
+        { name: 'Leicester City', logo: Lei, color: '#0053A0', link: '/https://www.lcfc.com/?utm_source=premier-league-website&utm_campaign=website&utm_medium=link' },
+        { name: 'Liverpool', logo: Liv, color: '#C8102E', link: 'https://www.liverpoolfc.com/?utm_source=premier-league-website&utm_campaign=website&utm_medium=link' },
+        { name: 'Manchester City', logo: Mci, color: '#6CABDD', link: 'https://www.mancity.com/?utm_source=premier-league-website&utm_campaign=website&utm_medium=link' },
+        { name: 'Newcastle United', logo: New, color: '#241F20', link: 'https://www.newcastleunited.com/?utm_source=premier-league-website&utm_campaign=website&utm_medium=link' },
+        { name: 'Nottingham Forest', logo: Nott, color: '#FF0000', link: 'https://www.nottinghamforest.co.uk/?utm_source=premier-league-website&utm_campaign=website&utm_medium=link' },
+        { name: 'Southampton', logo: Sou, color: '#D71920', link: 'https://www.southamptonfc.com/?utm_source=premier-league-website&utm_campaign=website&utm_medium=link' },
+        { name: 'Tottenham Hotspur', logo: Tot, color: '#132257', link: 'https://www.tottenhamhotspur.com/?utm_source=premier-league-website&utm_campaign=website&utm_medium=link' },
+        { name: 'Manchester United', logo: Utd, color: '#DA291C', link: 'https://www.manutd.com/?utm_source=premier-league-website&utm_campaign=website&utm_medium=link' },
+        { name: 'West Ham United', logo: Whu, color: '#7A263A', link: 'https://www.whufc.com/?utm_source=premier-league-website&utm_campaign=website&utm_medium=link' },
+        { name: 'Wolverhampton Wanderers', logo: Wol, color: '#FDB913', link: 'https://www.wolves.co.uk/?utm_source=premier-league-website&utm_campaign=website&utm_medium=link' },
     ];
 
   return (
@@ -100,10 +100,12 @@ function Clubs() {
       <div className="container mx-auto py-8 px-6">
         <div className="grid grid-cols-4 gap-4">
         {clubsData.map((club, index) => (
-            <div 
+            <a 
                 key={index} 
+                href={club.link} 
+                target="_blank"
                 className="rounded-lg shadow-md overflow-hidden" 
-                style={{ backgroundColor: club.color }}
+                style={{ backgroundColor: club.color, textDecoration: 'none' }}
             >
                 <div className="p-4">
                 <img
@@ -129,7 +131,7 @@ function Clubs() {
                     />
                 </svg>
                 </div>
-            </div>
+            </a>
             ))}
         </div>
       </div>
