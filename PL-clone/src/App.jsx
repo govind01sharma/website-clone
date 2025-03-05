@@ -6,6 +6,7 @@ import Fixtures from "./components/Fixtures";
 import Table from "./pages/Table";
 import SignIn from "./pages/Signin";
 import Stats from "./pages/Stats";
+import NewsRoute from "./pages/NewsRoute";
 import Footer from "./components/Footer";
 
 function App() {
@@ -14,7 +15,7 @@ function App() {
       <div className="w-full flex flex-col min-h-screen"> 
         <Header />
         
-        <main className="flex-grow w-full pt-[200px]">
+        <main className="flex-grow w-full pt-[200px] pb-10">
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/home" element={<HomePage />} />
@@ -23,6 +24,7 @@ function App() {
             <Route path="/table" element={<Table />} />
             <Route path="/signin" element={<SignIn />} />
             <Route path="/stats" element={<Stats />} />
+            <Route path="/news" element={<NewsRoute />} />
           </Routes>
         </main>
         <Footer /> 
