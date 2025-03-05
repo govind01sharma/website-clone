@@ -6,8 +6,8 @@ import MediumNews2 from '../assets/images/news-section/Medium2.webp';
 function NewsSection() {
   return (
     <div className="flex gap-5 p-5">
-  <a href="/news" className="w-2/3 block group">
-    <img src={BigNews} alt="Big News" className="rounded-lg mb-2 group-hover:scale-105 transition duration-200" />
+  <a href="/news" className="w-2/3 block rounded-lg group overflow-hidden shadow-md">
+    <img src={BigNews} alt="Big News" className=" mb-2 group-hover:scale-105 transition duration-200" />
     <div className="px-4">
       <div className="text-sm text-white font-semibold">Feature</div>
       <h3 className="text-2xl font-bold text-white mb-2 group-hover:underline transition duration-200">Why has Cole Palmer gone cold?</h3>
