@@ -37,6 +37,11 @@ const PaginationLink = ({
 }) => (
   <a
     aria-current={isActive ? "page" : undefined}
+    style={{
+      backgroundColor: "#37003C",
+      color: "white",
+      border: "1px solid #37003C", // Optional
+    }}
     className={cn(buttonVariants({
       variant: isActive ? "outline" : "ghost",
       size,
