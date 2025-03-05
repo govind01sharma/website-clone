@@ -66,10 +66,10 @@ function NewsRoute() {
           <div className="w-1/3">
             <img src={News1} alt="Football players" className="w-full h-auto" />
           </div>
-          <div className="w-2/3 pl-4">
+          <div className="w-2/3 pl-4 pt-10">
             <h2 className="text-sm font-bold text-purple-700 mb-2">Feature</h2> 
-            <h3 className="text-xl font-semibold mb-2">Preview: All you need to know ahead of European last-16 ties</h3>
-            <p className="text-gray-600">Ben Bloom looks at how Aston Villa, Arsenal, Liverpool, Spurs, Man Utd and Chelsea will fare in their respective matches</p>
+            <h3 className="text-3xl text-[#37003C] font-semibold mb-2">Preview: All you need to know ahead of European last-16 ties</h3>
+            <p className="text-xs text-[#37003C]">Ben Bloom looks at how Aston Villa, Arsenal, Liverpool, Spurs, Man Utd and Chelsea will fare in their respective matches</p>
           </div>
         </div>
       </section>
@@ -79,10 +79,94 @@ function NewsRoute() {
           <div className="w-1/3">
             <img src={News2} alt="Arsenal player at press conference" className="w-full h-auto" />
           </div>
-          <div className="w-2/3 pl-4">
+          <div className="w-2/3 pl-4 pt-10">
           <h2 className="text-sm font-bold text-purple-700 mb-2">News</h2> 
-            <h3 className="text-xl font-semibold mb-2">Timber: Champions League offers chance for Arsenal to change narrative</h3>
-            <p className="text-gray-600">Arsenal defender says win against PSV can give his side a much-needed boost and adds that his side need to 'go for it'</p>
+          <h3 className="text-3xl text-[#37003C] font-semibold mb-2">Timber: Champions League offers chance for Arsenal to change narrative</h3>
+          <p className="text-xs text-[#37003C]">Arsenal defender says win against PSV can give his side a much-needed boost and adds that his side need to 'go for it'</p>
+          </div>
+        </div>
+      </section>
+
+      <section className="mt-8 mx-4">
+        <div className="flex">
+          <div className="w-1/3">
+            <img src={News3} alt="Arsenal player at press conference" className="w-full h-auto" />
+          </div>
+          <div className="w-2/3 pl-4 pt-10">
+          <h2 className="text-sm font-bold text-purple-700 mb-2">News</h2> 
+          <h3 className="text-3xl text-[#37003C] font-semibold mb-2">'We must improve our away form,' says Emery as he receives injury boost</h3>
+          <p className="text-xs text-[#37003C]"> Villa head coach previews his side's Champions League last-16 tie against Club Brugge, one of the teams who beat the Villans on the road this season </p>
+          </div>
+        </div>
+      </section>
+
+
+      <section className="mt-8 mx-4">
+        <div className="flex">
+          <div className="w-1/3">
+            <img src={News4} alt="Arsenal player at press conference" className="w-full h-auto" />
+          </div>
+          <div className="w-2/3 pl-4 pt-10">
+          <h2 className="text-sm font-bold text-purple-700 mb-2">Club News</h2> 
+          <h3 className="text-3xl text-[#37003C] font-semibold mb-2">Sels the hero as Forest beat Ipswich on penalties in FA Cup</h3>
+          </div>
+        </div>
+      </section>
+
+
+
+      <section className="mt-8 mx-4">
+        <div className="flex">
+          <div className="w-1/3">
+            <img src={News5} alt="Arsenal player at press conference" className="w-full h-auto" />
+          </div>
+          <div className="w-2/3 pl-4 pt-10">
+          <h2 className="text-sm font-bold text-purple-700 mb-2">Feature</h2> 
+          <h3 className="text-3xl text-[#37003C] font-semibold mb-2">How much will Wolves miss Cunha in relegation battle?</h3>
+          <p className="text-xs text-[#37003C]"> With star striker facing a period out through suspension, we look at how Vitor Pereira's side will cope without Brazilian </p>
+          </div>
+        </div>
+      </section>
+
+
+      <section className="mt-8 mx-4">
+        <div className="flex">
+          <div className="w-1/3">
+            <img src={News6} alt="Arsenal player at press conference" className="w-full h-auto" />
+          </div>
+          <div className="w-2/3 pl-4 pt-10">
+          <h2 className="text-sm font-bold text-purple-700 mb-2">Fantasy Premier League</h2> 
+          <h3 className="text-3xl text-[#37003C] font-semibold mb-2">Who are now the best FPL forwards as popular picks are sidelined?</h3>
+          <p className="text-xs text-[#37003C]">The Scout analyses the underlying numbers, assesses the fixtures and reveals the standout picks for the next two Gameweeks </p>
+          </div>
+        </div>
+      </section>
+
+
+      <section className="mt-8 mx-4">
+        <div className="flex">
+          <div className="w-1/3">
+            <img src={News7} alt="Arsenal player at press conference" className="w-full h-auto" />
+          </div>
+          <div className="w-2/3 pl-4 pt-10">
+          <h2 className="text-sm font-bold text-purple-700 mb-2">Quiz</h2> 
+          <h3 className="text-3xl text-[#37003C] font-semibold mb-2">Quiz: Can you name the top Premier League scorer from 30 different nations?</h3>
+          <p className="text-xs text-[#37003C]"> How well do you know the leading Premier League goalscorers from all corners of the world? </p>
+          </div>
+        </div>
+      </section>
+
+
+
+      <section className="mt-8 mx-4">
+        <div className="flex">
+          <div className="w-1/3">
+            <img src={News8} alt="Arsenal player at press conference" className="w-full h-auto" />
+          </div>
+          <div className="w-2/3 pl-4 pt-10">
+          <h2 className="text-sm font-bold text-purple-700 mb-2">Fantasy Premier League</h2> 
+          <h3 className="text-3xl text-[#37003C] font-semibold mb-2">How FA Cup ties have caused CARNAGE for FPL managers</h3>
+          <p className="text-xs text-[#37003C]"> The Scout looks at who's injured and suspended, and what lies ahead with Blank Gameweeks following the weekend's action </p>
           </div>
         </div>
       </section>
