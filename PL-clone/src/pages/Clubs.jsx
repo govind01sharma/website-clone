@@ -104,6 +104,7 @@ function Clubs() {
                 key={index} 
                 href={club.link} 
                 target="_blank"
+                rel="noreferrer"
                 className="rounded-lg shadow-md overflow-hidden" 
                 style={{ backgroundColor: club.color, textDecoration: 'none' }}
             >
