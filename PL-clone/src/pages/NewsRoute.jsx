@@ -13,7 +13,7 @@ function NewsRoute() {
     <div>
       {/* Header */}
       <header
-        className="bg-gradient-to-r from-blue-500 to-purple-500"
+        className="bg-gradient-to-r from-[#37003C] to-blue-500"
         style={{
           height: '194px',
           display: 'flex',

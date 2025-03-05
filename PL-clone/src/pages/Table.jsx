@@ -47,7 +47,7 @@ function Table() {
 
   return (
     <div className="font-sans mx-auto my-5 rounded-lg shadow-md overflow-hidden bg-white w-full px-4">
-      <div className="bg-gradient-to-r from-[#672c98] to-[#0391ff] text-white py-3 px-5 text-center font-bold text-lg flex items-center justify-center">
+      <div className="bg-gradient-to-r from-[#37003C] to-blue-500 text-white py-3 px-5 text-center font-bold text-lg flex items-center justify-center">
         <img src={PLlogo} alt="Premier League" className="w-6 h-8 mr-2" />
         Premier League Table
       </div>
