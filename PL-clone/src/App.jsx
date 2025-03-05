@@ -7,6 +7,7 @@ import Table from "./pages/Table";
 import SignIn from "./pages/Signin";
 import Stats from "./pages/Stats";
 import NewsRoute from "./pages/NewsRoute";
+import Clubs from "./pages/Clubs";
 import Footer from "./components/Footer";
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
             <Route path="/signin" element={<SignIn />} />
             <Route path="/stats" element={<Stats />} />
             <Route path="/news" element={<NewsRoute />} />
+            <Route path="/clubs" element={<Clubs />} />
           </Routes>
         </main>
         <Footer /> 

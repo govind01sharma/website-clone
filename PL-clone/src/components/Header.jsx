@@ -138,6 +138,8 @@ function Header() {
                         ? "/stats"
                         : item === "News"
                         ? "/news"
+                        : item === "Clubs"
+                        ? "/clubs"
                         : "#"
                     )
                   }
